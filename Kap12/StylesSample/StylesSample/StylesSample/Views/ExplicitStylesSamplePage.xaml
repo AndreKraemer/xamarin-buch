@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSample.Views.ExplicitStylesSamplePage"
+             Title="Explicit Styles">
+        <ContentPage.Resources>
+            <ResourceDictionary>
+                <Style x:Key="BaseStyle" TargetType="Label">
+                    <Setter Property="FontSize" Value="20"></Setter>
+                    <Setter Property="Padding" Value="10"></Setter>
+                    <Setter Property="TextColor" Value="White"></Setter>
+                </Style>
+                <Style x:Key="Error" BasedOn="{StaticResource BaseStyle}" TargetType="Label">
+                    <Setter Property="BackgroundColor" Value="Red"></Setter>
+                </Style>
+                <Style x:Key="Warning" BasedOn="{StaticResource BaseStyle}" TargetType="Label">
+                    <Setter Property="BackgroundColor" Value="Orange"></Setter>
+                </Style>
+                <Style x:Key="Success" BasedOn="{StaticResource BaseStyle}" TargetType="Label">
+                    <Setter Property="BackgroundColor" Value="DarkSeaGreen"></Setter>
+                </Style>
+            </ResourceDictionary>
+        </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource Error}" Text="Das ist eine Fehlermeldung"/>
+            <Label Style="{StaticResource Warning}" Text="Das ist eine Warnmeldung"/>
+            <Label Style="{StaticResource Success}" Text="Das ist eine Erfolgsmeldung"/>
+            <Button Text="Das ist ein Button"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

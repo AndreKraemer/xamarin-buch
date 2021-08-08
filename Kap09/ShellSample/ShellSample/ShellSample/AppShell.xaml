@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ShellSample"
+       Title="ShellSample"
+       x:Class="ShellSample.AppShell">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="#091F35" Padding="20">
+                <Label Text="Shell Demo" FontSize="Large" TextColor="White"></Label>
+                <Label Text="Xamarin.Forms Shell" TextColor="White"></Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    <ShellContent Title="Startseite" Icon="icon_feed.png" Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}" />
+    <ShellContent Title="Über" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    <MenuItem Text="Info" IconImageSource="icon_about.png" Clicked="MenuItem_OnClicked"></MenuItem>
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="#2097C8" Padding="20">
+                <Label Text="Footer der" FontSize="Large" TextColor="White"></Label>
+                <Label Text="Xamarin.Forms Shell" TextColor="White"></Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+</Shell>

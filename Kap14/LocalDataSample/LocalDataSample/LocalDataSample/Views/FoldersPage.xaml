@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:LocalDataSample.ViewModels;assembly=LocalDataSample"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             xmlns:models="clr-namespace:LocalDataSample.Models;assembly=LocalDataSample"
+             x:Class="LocalDataSample.Views.FoldersPage"
+             Title="Ordner in einer Xamarin.Forms App"
+             x:DataType="viewModels:FoldersViewModel">
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding Folders}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout x:DataType="models:Folder">
+                            <Label FontAttributes="Bold" Text="{Binding Name}"></Label>
+                            <Label FontAttributes="Italic" Text="{Binding Location}"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

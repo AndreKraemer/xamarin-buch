@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSample.Views.ImplicitStylesSamplePage"
+             Title="Implicit Styles">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Das ist ein Label"></Label>
+            <Button Text="Das ist ein Button"></Button>
+            <!--<BoxView>
+                <BoxView.Style>
+                    <Style TargetType="BoxView">
+                        <Setter Property="HeightRequest" Value="200"></Setter>
+                        <Setter Property="WidthRequest" Value="200"></Setter>
+                        <Setter Property="BackgroundColor" Value="Green"></Setter>
+                    </Style>
+                </BoxView.Style>
+            </BoxView>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

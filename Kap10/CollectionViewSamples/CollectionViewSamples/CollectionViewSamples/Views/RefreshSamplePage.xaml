@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:CollectionViewSamples.Models;assembly=CollectionViewSamples"
+             xmlns:viewModels="clr-namespace:CollectionViewSamples.ViewModels;assembly=CollectionViewSamples"
+             x:Class="CollectionViewSamples.Views.RefreshSamplePage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout x:DataType="viewModels:RefreshSampleViewModel">
+            <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy}">
+                <CollectionView ItemsSource="{Binding Items}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Item">
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Text}" FontAttributes="Bold"></Label>
+                                <Label Text="{Binding Description}"></Label>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElVegetarianoFurio.AppShell"
+             xmlns:local="clr-namespace:ElVegetarianoFurio;assembly=ElVegetarianoFurio"
+             xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile;assembly=ElVegetarianoFurio"
+             xmlns:menu="clr-namespace:ElVegetarianoFurio.Menu;assembly=ElVegetarianoFurio"
+             xmlns:fonts="clr-namespace:ElVegetarianoFurio.Fonts;assembly=ElVegetarianoFurio">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout Padding="30" BackgroundColor="DarkRed">
+                <Label FontSize="Large"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                       FontFamily="Sofia">
+                    El Vegetariano Furio
+                </Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <ShellContent Title="Start" ContentTemplate="{DataTemplate local:MainPage}">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.Home}" Color="Black"></FontImageSource>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <FlyoutItem Title="Speisekarte">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.Utensils}" Color="Black"></FontImageSource>
+        </FlyoutItem.Icon>
+        <ShellContent Title="Ensaladas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.Carrot}"></FontImageSource>
+            </ShellContent.Icon>
+            <ShellContent.ContentTemplate>
+                <DataTemplate>
+                    <menu:CategoryPage>
+                        <x:Arguments>
+                            <x:String>1</x:String>
+                        </x:Arguments>
+                    </menu:CategoryPage>
+                </DataTemplate>
+            </ShellContent.ContentTemplate>
+        </ShellContent>
+        <ShellContent Title="Sopas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.UtensilSpoon}"></FontImageSource>
+            </ShellContent.Icon>
+            <ShellContent.ContentTemplate>
+                <DataTemplate>
+                    <menu:CategoryPage>
+                        <x:Arguments>
+                            <x:String>2</x:String>
+                        </x:Arguments>
+                    </menu:CategoryPage>
+                </DataTemplate>
+            </ShellContent.ContentTemplate>
+        </ShellContent>
+        <ShellContent Title="Tapas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.PepperHot}"></FontImageSource>
+            </ShellContent.Icon>
+            <ShellContent.ContentTemplate>
+                <DataTemplate>
+                    <menu:CategoryPage>
+                        <x:Arguments>
+                            <x:String>3</x:String>
+                        </x:Arguments>
+                    </menu:CategoryPage>
+                </DataTemplate>
+            </ShellContent.ContentTemplate>
+        </ShellContent>
+        <ShellContent Title="Principales">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.Utensils}"></FontImageSource>
+            </ShellContent.Icon>
+            <ShellContent.ContentTemplate>
+                <DataTemplate>
+                    <menu:CategoryPage>
+                        <x:Arguments>
+                            <x:String>4</x:String>
+                        </x:Arguments>
+                    </menu:CategoryPage>
+                </DataTemplate>
+            </ShellContent.ContentTemplate>
+        </ShellContent>
+        <ShellContent Title="Postres">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.IceCream}"></FontImageSource>
+            </ShellContent.Icon>
+            <ShellContent.ContentTemplate>
+                <DataTemplate>
+                    <menu:CategoryPage>
+                        <x:Arguments>
+                            <x:String>5</x:String>
+                        </x:Arguments>
+                    </menu:CategoryPage>
+                </DataTemplate>
+            </ShellContent.ContentTemplate>
+        </ShellContent>
+        <ShellContent Title="Bebidas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.GlassCheers}"></FontImageSource>
+            </ShellContent.Icon>
+            <ShellContent.ContentTemplate>
+                <DataTemplate>
+                    <menu:CategoryPage>
+                        <x:Arguments>
+                            <x:String>6</x:String>
+                        </x:Arguments>
+                    </menu:CategoryPage>
+                </DataTemplate>
+            </ShellContent.ContentTemplate>
+        </ShellContent>
+    </FlyoutItem>
+
+    <ShellContent Title="Kontakt" ContentTemplate="{DataTemplate local:MainPage}">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.MapMarkedAlt}" Color="Black"></FontImageSource>
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Profil" ContentTemplate="{DataTemplate profile:ProfilePage}">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid" Glyph="{x:Static fonts:FaSolid.UserCircle}" Color="Black"></FontImageSource>
+        </ShellContent.Icon>
+    </ShellContent>
+</Shell>

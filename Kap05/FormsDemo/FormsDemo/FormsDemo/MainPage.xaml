@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsDemo.MainPage" 
+             BackgroundColor="#2196F3" 
+             Title="Login via XAML">
+    <StackLayout>
+        <StackLayout Padding="30">
+            <Label TextColor="White" 
+                   FontSize="20" 
+                   Text="Herzlich Willkommen zur Xamarin.Forms Demo">
+            </Label>
+        </StackLayout>
+        <Frame BackgroundColor="White" CornerRadius="10" Margin="20">
+            <StackLayout  Padding="10" >
+                <Label Text="Benutzername"></Label>
+                <Entry Text="Wilhelm.Brause" ></Entry>
+                <Label Text="Passwort"></Label>
+                <Entry IsPassword="True"></Entry>
+                <Button Text="Absenden"></Button>
+                <Button Text="Absenden"></Button>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

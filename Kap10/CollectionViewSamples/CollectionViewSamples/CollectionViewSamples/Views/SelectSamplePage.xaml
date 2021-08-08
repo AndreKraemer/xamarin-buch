@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:CollectionViewSamples.Models;assembly=CollectionViewSamples"
+             xmlns:viewModels="clr-namespace:CollectionViewSamples.ViewModels;assembly=CollectionViewSamples"
+             x:Class="CollectionViewSamples.Views.SelectSamplePage"
+             x:DataType="viewModels:SelectSampleViewModel"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="{Binding SelectedText}"></Label>
+            <!--<Label Text="{Binding TappedText}"></Label>-->
+            <CollectionView ItemsSource="{Binding Items}" 
+                            SelectedItem="{Binding SelectedItem}"
+                            SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Item">
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Text}" FontAttributes="Bold"></Label>
+                            <Label Text="{Binding Description}"></Label>
+                            <!--<StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:SelectSampleViewModel}}, Path=ItemTapped}"		
+                                    CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>-->
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

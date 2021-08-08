@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElVegetarianoFurio.AppShell"
+             xmlns:local="clr-namespace:ElVegetarianoFurio;assembly=ElVegetarianoFurio"
+             xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile;assembly=ElVegetarianoFurio">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout Padding="30" BackgroundColor="DarkRed">
+                <Label FontSize="Large"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand">
+                    El Vegetariano Furio
+                </Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <ShellContent Title="Start" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+
+    <FlyoutItem Title="Speisekarte">
+        <ShellContent Title="Ensaladas" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+        <ShellContent Title="Sopas" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+        <ShellContent Title="Tapas" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+        <ShellContent Title="Principales" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+        <ShellContent Title="Postres" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+        <ShellContent Title="Bebidas" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+    </FlyoutItem>
+
+    <ShellContent Title="Kontakt" ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+    <ShellContent Title="Profil" ContentTemplate="{DataTemplate profile:ProfilePage}"></ShellContent>
+</Shell>

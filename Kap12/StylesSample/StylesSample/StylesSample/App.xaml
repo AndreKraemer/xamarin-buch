@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSample.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="#091F35"></Setter>
+                <Setter Property="Padding" Value="5"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+            </Style>
+            <Style TargetType="StackLayout">
+                <Setter Property="Padding" Value="20"></Setter>
+                <Setter Property="Spacing" Value="20"></Setter>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

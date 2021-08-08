@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:menu="clr-namespace:ElVegetarianoFurio.Menu;assembly=ElVegetarianoFurio"
+             x:Class="ElVegetarianoFurio.Menu.DishPage"
+             x:DataType="menu:DishViewModel"
+             Title="{Binding Dish.Name}">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="400" HorizontalOptions="FillAndExpand" BackgroundColor="Red"></BoxView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="{Binding Dish.Name}" FontAttributes="Bold"></Label>
+                <Label Grid.Column="1" Text="{Binding Dish.Price, StringFormat='{0:C}'}"></Label>
+                <Label Grid.Row="1" Text="{Binding Dish.Description}" FontAttributes="Italic"></Label>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.AbsoluteLayoutSamplePage"
+             Title="AbsoluteLayout Demo">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <BoxView AbsoluteLayout.LayoutBounds="0.3,20,0.7,150"  AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                     BackgroundColor="#2097C8"/>
+            <Label AbsoluteLayout.LayoutBounds="20,40,180,40" Padding ="10"
+                   BackgroundColor="#091F35" TextColor="White" Text="Wilhelm Brause" />
+            <Label AbsoluteLayout.LayoutBounds="260,120,60,40" Padding ="10"
+                   BackgroundColor="#091F35" TextColor="White" Text="2021" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

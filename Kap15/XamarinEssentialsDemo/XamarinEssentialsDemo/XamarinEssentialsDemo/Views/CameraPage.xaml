@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:XamarinEssentialsDemo.ViewModels;assembly=XamarinEssentialsDemo"
+             x:DataType="viewModels:MediaViewModel"
+             mc:Ignorable="d"
+             x:Class="XamarinEssentialsDemo.Views.CameraPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Button Text="Fotos auswählen" Command="{Binding OpenGalleryCommand}"/>
+            <Button Text="Fotos aufnehmen" Command="{Binding OpenCameraCommand}"/>
+            <Image Source="{Binding Image}"></Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

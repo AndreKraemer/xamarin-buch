@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:formsDemo="clr-namespace:FormsDemo;assembly=FormsDemo"
+             x:Class="FormsDemo.AppShell">
+    <FlyoutItem Title="Login Seite via Xaml">
+        <ShellContent ContentTemplate="{DataTemplate formsDemo:MainPage}"></ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Login Seite via Code (Initialzier)">
+        <ShellContent ContentTemplate="{DataTemplate formsDemo:MainPageCsInitializer}"></ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Login Seite via Code">
+        <ShellContent ContentTemplate="{DataTemplate formsDemo:MainPageCs}"></ShellContent>
+    </FlyoutItem>
+</Shell>
