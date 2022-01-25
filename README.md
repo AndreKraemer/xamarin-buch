@@ -11,6 +11,10 @@ die wir Schritt für Schritt in diesem Buch entwickeln werden. Der Quellcode der
 
 Inhalt der Beispiel-App ist die Umsetzung einer Speisekarten-App für das fiktive vegetarische, spanische Restaurant El Vegetariano Furio (zu Deutsch: Der wütende Vegetarier).
 
+## UWP Beispielprojekte
+
+Ergänzend zu den im Buch gezeigten Beispielen wurde zu jeder Beispielprojekte noch ein UWP-Projekt hinzugefügt.
+
 ## Fehler, Korrekturen und Kontakt.
 Korrekturen zu fachlichen Fehlern im Buch sowie Rechtschreibkorrekturen finden Sie auf der Webseite zu diesem Buch, die Sie unter https://andrekraemer.de/xamarin-buch erreichen.
 

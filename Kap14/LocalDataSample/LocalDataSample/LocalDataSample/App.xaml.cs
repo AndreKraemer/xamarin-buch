@@ -13,8 +13,8 @@ namespace LocalDataSample
         {
             InitializeComponent();
 
-            //DependencyService.Register<DbDataStore>();
-            DependencyService.Register<FileDataStore>();
+            DependencyService.Register<DbDataStore>();
+            //DependencyService.Register<FileDataStore>();
             MainPage = new AppShell();
         }
 

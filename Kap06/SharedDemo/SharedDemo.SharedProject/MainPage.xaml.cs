@@ -23,6 +23,10 @@ namespace SharedDemo
             // Dieser Code wird nur in das iOS Projekt
             // herein kompiliert
             text = UIKit.UIDevice.CurrentDevice.Name;
+#elif WINDOWS_UWP
+            var hostNames = Windows.Networking.Connectivity.NetworkInformation.GetHostNames();
+            var hostName = hostNames.FirstOrDefault();
+            text = hostName.DisplayName;
 #endif
             DeviceInfoLabel.Text = text;
         }

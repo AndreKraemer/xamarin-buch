@@ -10,9 +10,10 @@ namespace LocalDataSample.Services
 {
     public class FileDataStore : IDataStore<Item>
     {
-
+        
         private readonly string _folder =
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes");
+            Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "notes");
+           // Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes");
 
 
         public FileDataStore()
